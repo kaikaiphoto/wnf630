@@ -76,10 +76,10 @@ export default function Schedule() {
   return (
     <section
       id="schedule"
-      className="py-24 bg-stone-900 relative overflow-hidden"
+      className="py-24 bg-[#240c0c] relative overflow-hidden"
     >
       <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-l from-stone-950 via-transparent to-transparent blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-l from-[#1c0808] via-transparent to-transparent blur-[120px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -107,7 +107,7 @@ export default function Schedule() {
               className={`px-5 py-2.5 rounded font-serif text-sm tracking-widest border transition-all duration-300 ${
                 filter === type
                   ? 'bg-amber-500 text-stone-950 border-amber-500 font-bold'
-                  : 'text-stone-300 border-stone-800 bg-stone-950/40 hover:text-stone-100 hover:border-stone-700'
+                  : 'text-stone-300 border-red-950 bg-[#150404]/40 hover:text-stone-100 hover:border-red-900/40'
               }`}
             >
               {type === 'upcoming' ? '近期日程 (Upcoming)' : type === 'completed' ? '过往足迹 (Completed)' : '全部演出 (All)'}
@@ -127,11 +127,11 @@ export default function Schedule() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05, duration: 0.6 }}
-                  className="bg-stone-950 border border-stone-800/80 rounded-lg p-5 sm:p-6 hover:border-amber-500/30 transition-all duration-300 group flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-6"
+                  className="bg-[#150404] border border-red-950/40 rounded-lg p-5 sm:p-6 hover:border-amber-500/30 transition-all duration-300 group flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-6"
                 >
                   {/* Left: Date details */}
                   <div className="flex items-center space-x-5 shrink-0">
-                    <div className="text-center w-20 bg-stone-900 border border-stone-800 rounded py-2 group-hover:border-amber-500/20 transition-colors">
+                    <div className="text-center w-20 bg-[#240c0c] border border-red-950/40 rounded py-2 group-hover:border-amber-500/20 transition-colors">
                       <p className="text-xxs font-mono text-amber-500 tracking-wider font-semibold uppercase">
                         {evt.type === 'concert' ? '音乐会' : evt.type === 'lecture' ? '讲座' : evt.type === 'masterclass' ? '大师班' : '国际交流'}
                       </p>
@@ -148,7 +148,7 @@ export default function Schedule() {
                         <span className={`text-xxs font-bold tracking-wider px-2 py-0.5 rounded ${
                           isUpcoming
                             ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/25 animate-pulse'
-                            : 'bg-stone-800 text-stone-500 border border-stone-800'
+                            : 'bg-red-950/40 text-stone-500 border border-red-950/20'
                         }`}>
                           {evt.status === 'upcoming' ? '售票预约中' : '演出已结束'}
                         </span>
@@ -182,7 +182,7 @@ export default function Schedule() {
                     {isUpcoming ? (
                       <button
                         onClick={() => handleOpenBooking(evt)}
-                        className="w-full sm:w-auto px-5 py-2.5 bg-stone-900 hover:bg-amber-500 text-stone-300 hover:text-stone-950 border border-stone-800 hover:border-amber-500 rounded text-xs font-serif font-bold tracking-widest transition-all duration-300 flex items-center justify-center space-x-2"
+                        className="w-full sm:w-auto px-5 py-2.5 bg-[#240c0c] hover:bg-amber-500 text-stone-300 hover:text-stone-950 border border-red-950/40 hover:border-amber-500 rounded text-xs font-serif font-bold tracking-widest transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Ticket className="w-4 h-4" />
                         <span>席位预定</span>
@@ -206,13 +206,13 @@ export default function Schedule() {
 
         {/* BOOKINGS HISTORY STORAGE TAB */}
         {bookings.length > 0 && (
-          <div className="max-w-3xl mx-auto mt-20 p-6 bg-stone-950 border border-stone-800 rounded-lg">
+          <div className="max-w-3xl mx-auto mt-20 p-6 bg-[#150404] border border-red-950/40 rounded-lg">
             <h3 className="text-base font-serif text-stone-200 tracking-wider mb-4 flex items-center space-x-2">
               <CheckCircle2 className="w-5 h-5 text-emerald-500" />
               <span>我的席位预约历史 ({bookings.length})</span>
             </h3>
             
-            <div className="divide-y divide-stone-900">
+            <div className="divide-y divide-red-950/30">
               {bookings.map((bk) => (
                 <div key={bk.id} className="py-3 flex items-center justify-between text-xs sm:text-sm">
                   <div className="space-y-1">
@@ -225,7 +225,7 @@ export default function Schedule() {
                   </div>
                   <button
                     onClick={() => handleCancelBooking(bk.id)}
-                    className="text-stone-500 hover:text-red-400 text-xxs font-mono border border-stone-800 hover:border-red-900/30 px-2 py-1 rounded transition-colors"
+                    className="text-stone-500 hover:text-red-400 text-xxs font-mono border border-red-950/30 hover:border-red-900/30 px-2 py-1 rounded transition-colors"
                   >
                     取消预约
                   </button>
@@ -250,10 +250,10 @@ export default function Schedule() {
               initial={{ scale: 0.95, y: 15 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 15 }}
-              className="bg-stone-900 border border-stone-800 rounded-lg max-w-lg w-full overflow-hidden shadow-2xl relative"
+              className="bg-[#240c0c] border border-red-950/40 rounded-lg max-w-lg w-full overflow-hidden shadow-2xl relative"
             >
               {/* Header */}
-              <div className="bg-stone-950 px-6 py-4 border-b border-stone-800 flex items-center justify-between">
+              <div className="bg-[#150404] px-6 py-4 border-b border-red-950/40 flex items-center justify-between">
                 <span className="font-serif text-stone-100 font-bold tracking-wider">席位与讲座预定</span>
                 <button
                   onClick={() => setSelectedEvent(null)}
@@ -268,7 +268,7 @@ export default function Schedule() {
                 {!successMsg ? (
                   <form onSubmit={handleBookingSubmit} className="space-y-4">
                     {/* Event summary banner */}
-                    <div className="bg-stone-950 p-4 rounded border border-stone-800/60 space-y-1">
+                    <div className="bg-[#150404] p-4 rounded border border-red-950/30 space-y-1">
                       <p className="text-xxs font-mono text-amber-500 font-semibold uppercase">确认演出日程信息</p>
                       <h4 className="text-sm font-serif font-bold text-stone-200">{selectedEvent.title}</h4>
                       <p className="text-xxs font-sans text-stone-400 flex items-center space-x-3">
@@ -291,7 +291,7 @@ export default function Schedule() {
                             value={formData.name}
                             onChange={handleInputChange}
                             placeholder="请输入姓名"
-                            className="w-full bg-stone-950 border border-stone-800 focus:border-amber-500/50 rounded p-2.5 pl-10 text-xs text-stone-200 placeholder-stone-600 focus:outline-none"
+                            className="w-full bg-[#150404] border border-red-950/40 focus:border-amber-500/50 rounded p-2.5 pl-10 text-xs text-stone-200 placeholder-stone-600 focus:outline-none"
                           />
                         </div>
                       </div>
@@ -307,7 +307,7 @@ export default function Schedule() {
                             value={formData.phone}
                             onChange={handleInputChange}
                             placeholder="输入联系电话"
-                            className="w-full bg-stone-950 border border-stone-800 focus:border-amber-500/50 rounded p-2.5 pl-10 text-xs text-stone-200 placeholder-stone-600 focus:outline-none"
+                            className="w-full bg-[#150404] border border-red-950/40 focus:border-amber-500/50 rounded p-2.5 pl-10 text-xs text-stone-200 placeholder-stone-600 focus:outline-none"
                           />
                         </div>
                       </div>
@@ -325,7 +325,7 @@ export default function Schedule() {
                             value={formData.email}
                             onChange={handleInputChange}
                             placeholder="您的邮箱"
-                            className="w-full bg-stone-950 border border-stone-800 focus:border-amber-500/50 rounded p-2.5 pl-10 text-xs text-stone-200 placeholder-stone-600 focus:outline-none"
+                            className="w-full bg-[#150404] border border-red-950/40 focus:border-amber-500/50 rounded p-2.5 pl-10 text-xs text-stone-200 placeholder-stone-600 focus:outline-none"
                           />
                         </div>
                       </div>
@@ -338,7 +338,7 @@ export default function Schedule() {
                             name="seats"
                             value={formData.seats}
                             onChange={handleInputChange}
-                            className="w-full bg-stone-950 border border-stone-800 focus:border-amber-500/50 rounded p-2.5 pl-10 text-xs text-stone-200 focus:outline-none appearance-none"
+                            className="w-full bg-[#150404] border border-red-950/40 focus:border-amber-500/50 rounded p-2.5 pl-10 text-xs text-stone-200 focus:outline-none appearance-none"
                           >
                             <option value="1">1 张门票</option>
                             <option value="2">2 张门票</option>
@@ -357,11 +357,11 @@ export default function Schedule() {
                         value={formData.note}
                         onChange={handleInputChange}
                         placeholder="想对先生说的话或购票附加要求..."
-                        className="w-full bg-stone-950 border border-stone-800 focus:border-amber-500/50 rounded p-2.5 text-xs text-stone-200 placeholder-stone-600 focus:outline-none resize-none"
+                        className="w-full bg-[#150404] border border-red-950/40 focus:border-amber-500/50 rounded p-2.5 text-xs text-stone-200 placeholder-stone-600 focus:outline-none resize-none"
                       />
                     </div>
 
-                    <div className="flex items-start space-x-2 text-xxs text-stone-500 bg-stone-950/40 p-3 rounded border border-stone-850">
+                    <div className="flex items-start space-x-2 text-xxs text-stone-500 bg-black/40 p-3 rounded border border-red-950/30">
                       <Info className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
                       <p className="leading-relaxed">
                         注意：本预约系统为个人官方通道免费特留预约位。提交成功后，工作室将在 3 个工作日内向您的邮箱发送电子确认书。请持有效证件及确认信前往场馆兑换实体票。
@@ -397,7 +397,7 @@ export default function Schedule() {
                     </div>
                     <button
                       onClick={() => setSelectedEvent(null)}
-                      className="px-6 py-2 bg-stone-800 hover:bg-stone-700 text-stone-200 rounded text-xs tracking-wider transition-colors"
+                      className="px-6 py-2 bg-red-950/80 hover:bg-red-900/85 text-stone-200 rounded text-xs tracking-wider transition-colors"
                     >
                       返回日程表
                     </button>

@@ -122,11 +122,11 @@ export default function Works() {
   return (
     <section
       id="works"
-      className="py-24 bg-stone-950 relative overflow-hidden"
+      className="py-24 bg-[#1c0808] relative overflow-hidden"
     >
       {/* Decorative radial ink drop animation background */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-stone-900/40 blur-[180px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-red-950/40 blur-[180px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -146,12 +146,12 @@ export default function Works() {
         </div>
 
         {/* SECTION 1: MASTER CLASS MUSIC PLAYER */}
-        <div className="bg-stone-900 border border-stone-800 rounded-lg p-6 sm:p-10 shadow-2xl mb-20 relative">
+        <div className="bg-[#240c0c] border border-red-950/40 rounded-lg p-6 sm:p-10 shadow-2xl mb-20 relative">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             
             {/* Player Side (Left 5 columns) */}
-            <div className="lg:col-span-5 flex flex-col justify-between space-y-8 bg-stone-950 p-6 sm:p-8 rounded border border-stone-800 relative overflow-hidden">
+            <div className="lg:col-span-5 flex flex-col justify-between space-y-8 bg-[#150404] p-6 sm:p-8 rounded border border-red-950/50 relative overflow-hidden">
               
               {/* Background abstract ink ripples on play */}
               {isPlaying && (
@@ -185,19 +185,19 @@ export default function Works() {
                 <div className="py-8 flex justify-center">
                   <div className="relative">
                     {/* Outer shining edge */}
-                    <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-stone-800 via-stone-700 to-stone-800 shadow-xl opacity-80" />
+                    <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-red-950 via-red-900/40 to-red-950 shadow-xl opacity-80" />
                     
                     {/* Vinyl Disc Body */}
                     <motion.div
                       animate={isPlaying ? { rotate: 360 } : {}}
                       transition={{ repeat: Infinity, duration: 15, ease: 'linear' }}
-                      className="w-44 h-44 rounded-full bg-stone-900 border-4 border-stone-950 flex items-center justify-center relative shadow-2xl z-10"
+                      className="w-44 h-44 rounded-full bg-[#150404] border-4 border-[#1c0808] flex items-center justify-center relative shadow-2xl z-10"
                     >
                       {/* Vinyl grooves lines */}
-                      <div className="absolute inset-3 rounded-full border border-stone-800/40" />
-                      <div className="absolute inset-6 rounded-full border border-stone-800/20" />
-                      <div className="absolute inset-10 rounded-full border border-stone-800/10" />
-                      <div className="absolute inset-14 rounded-full border border-stone-800/5" />
+                      <div className="absolute inset-3 rounded-full border border-red-900/20" />
+                      <div className="absolute inset-6 rounded-full border border-red-900/15" />
+                      <div className="absolute inset-10 rounded-full border border-red-900/10" />
+                      <div className="absolute inset-14 rounded-full border border-red-900/5" />
 
                       {/* Center label (Classical style) */}
                       <div className="w-16 h-16 rounded-full bg-amber-500/10 border-2 border-amber-500/40 flex items-center justify-center relative overflow-hidden">
@@ -222,7 +222,7 @@ export default function Works() {
               <div className="space-y-4 relative z-10 pt-4">
                 {/* Progress bar */}
                 <div className="space-y-1.5">
-                  <div className="h-1 bg-stone-800 rounded-full overflow-hidden">
+                  <div className="h-1 bg-red-950/80 rounded-full overflow-hidden">
                     <motion.div
                       className="h-full bg-gradient-to-r from-amber-500 to-amber-400"
                       style={{ width: `${progress}%` }}
@@ -240,7 +240,7 @@ export default function Works() {
                   {isPlaying && (
                     <button
                       onClick={handleStop}
-                      className="p-2.5 rounded-full border border-stone-800 hover:border-red-900/60 hover:text-red-400 text-stone-400 transition-all duration-300 active:scale-90"
+                      className="p-2.5 rounded-full border border-red-950/60 hover:border-red-900/60 hover:text-red-400 text-stone-400 transition-all duration-300 active:scale-90"
                       title="停止"
                     >
                       <span className="block w-2.5 h-2.5 bg-current rounded-sm" />
@@ -269,7 +269,7 @@ export default function Works() {
               
               {/* Tabs for Era selection */}
               <div className="space-y-4">
-                <div className="flex items-center justify-between border-b border-stone-800 pb-2">
+                <div className="flex items-center justify-between border-b border-red-950/40 pb-2">
                   <span className="text-sm font-serif font-bold text-stone-100 tracking-wider flex items-center space-x-2">
                     <Music className="w-4 h-4 text-amber-500" />
                     <span>选曲赏析</span>
@@ -284,7 +284,7 @@ export default function Works() {
                         className={`px-3 py-1 text-xs rounded transition-all duration-300 ${
                           eraFilter === era
                             ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
-                            : 'text-stone-400 hover:text-stone-200 hover:bg-stone-800/40'
+                            : 'text-stone-400 hover:text-stone-200 hover:bg-red-900/20'
                         }`}
                       >
                         {era === 'all' ? '全部' : era === 'traditional' ? '古曲传统' : '现代交响'}
@@ -304,15 +304,15 @@ export default function Works() {
                         onClick={() => handleTrackSelect(track)}
                         className={`w-full text-left p-3 rounded flex items-center justify-between border transition-all duration-300 ${
                           isSelected
-                            ? 'bg-stone-950 border-amber-500/30'
-                            : 'bg-stone-900/60 border-stone-800 hover:border-stone-700 hover:bg-stone-800/30'
+                            ? 'bg-[#150404] border-amber-500/30'
+                            : 'bg-[#240c0c]/60 border-red-950/30 hover:border-red-900/40 hover:bg-red-950/20'
                         }`}
                       >
                         <div className="flex items-center space-x-3 min-w-0">
                           <div className={`w-8 h-8 rounded-full border flex items-center justify-center transition-colors ${
                             isSelected 
                               ? 'bg-amber-500/10 border-amber-500/30 text-amber-400' 
-                              : 'bg-stone-900 border-stone-800 text-stone-500'
+                              : 'bg-[#240c0c] border-red-950/40 text-stone-500'
                           }`}>
                             {isCurrentPlaying ? (
                               <span className="flex space-x-0.5 items-end h-3">
@@ -343,7 +343,7 @@ export default function Works() {
               </div>
 
               {/* Song Background Narrative Story Scroll */}
-              <div className="bg-stone-950 p-5 rounded border border-stone-800 relative flex-grow flex flex-col justify-between">
+              <div className="bg-[#150404] p-5 rounded border border-red-950/40 relative flex-grow flex flex-col justify-between">
                 <div className="space-y-2">
                   <h4 className="text-xs font-serif text-amber-500/80 font-semibold tracking-widest uppercase flex items-center space-x-1">
                     <Sparkles className="w-3.5 h-3.5" />
@@ -354,7 +354,7 @@ export default function Works() {
                   </p>
                 </div>
                 
-                <div className="flex items-center justify-between text-stone-500 text-xxs font-mono border-t border-stone-900 pt-4 mt-4">
+                <div className="flex items-center justify-between text-stone-500 text-xxs font-mono border-t border-red-950/30 pt-4 mt-4">
                   <span>琴圣传艺系列</span>
                   <span>万年芳亲书说乐</span>
                 </div>
@@ -368,7 +368,7 @@ export default function Works() {
 
         {/* SECTION 2: LIVE RECORDING VIDEO THEATER */}
         <div className="space-y-6">
-          <h3 className="text-xl font-serif text-stone-200 tracking-widest flex items-center space-x-2 border-b border-stone-800 pb-3">
+          <h3 className="text-xl font-serif text-stone-200 tracking-widest flex items-center space-x-2 border-b border-red-950/40 pb-3">
             <Film className="w-5 h-5 text-amber-500" />
             <span>演出精选视频</span>
           </h3>
@@ -378,10 +378,10 @@ export default function Works() {
               <div
                 key={video.id}
                 onClick={() => handleOpenVideo(video)}
-                className="bg-stone-900 border border-stone-800/80 rounded overflow-hidden group cursor-pointer hover:border-stone-700 transition-all duration-300 flex flex-col justify-between h-full hover:shadow-xl hover:shadow-black/40"
+                className="bg-[#240c0c] border border-red-950/30 rounded overflow-hidden group cursor-pointer hover:border-red-900/40 transition-all duration-300 flex flex-col justify-between h-full hover:shadow-xl hover:shadow-black/40"
               >
                 {/* Video Cover Image Wrapper */}
-                <div className="relative overflow-hidden aspect-video bg-stone-950">
+                <div className="relative overflow-hidden aspect-video bg-[#150404]">
                   <img
                     src={video.coverUrl}
                     alt={video.title}
@@ -390,13 +390,13 @@ export default function Works() {
                   />
                   {/* Playing hover circle icon */}
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-60 group-hover:opacity-100 transition-opacity">
-                    <div className="w-12 h-12 rounded-full bg-stone-900/90 border border-amber-500/30 text-amber-400 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 rounded-full bg-[#240c0c]/90 border border-amber-500/30 text-amber-400 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                       <Play className="w-5 h-5 fill-current text-amber-400 translate-x-0.5" />
                     </div>
                   </div>
 
                   {/* Duration Tag */}
-                  <span className="absolute bottom-2 right-2 px-2 py-0.5 bg-stone-950/80 backdrop-blur-sm rounded text-stone-300 text-xxs font-mono tracking-widest">
+                  <span className="absolute bottom-2 right-2 px-2 py-0.5 bg-black/60 backdrop-blur-sm rounded text-stone-300 text-xxs font-mono tracking-widest">
                     {video.duration}
                   </span>
                 </div>
@@ -412,7 +412,7 @@ export default function Works() {
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-between text-stone-500 text-xxs font-mono border-t border-stone-800/60 pt-3 mt-3">
+                  <div className="flex items-center justify-between text-stone-500 text-xxs font-mono border-t border-red-950/40 pt-3 mt-3">
                     <span>{video.venue}</span>
                     <span>{video.date}</span>
                   </div>
@@ -437,10 +437,10 @@ export default function Works() {
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              className="bg-stone-900 rounded-lg max-w-4xl w-full border border-stone-800 overflow-hidden shadow-2xl relative"
+              className="bg-[#240c0c] rounded-lg max-w-4xl w-full border border-red-950/40 overflow-hidden shadow-2xl relative"
             >
               {/* Header */}
-              <div className="bg-stone-950 px-6 py-4 border-b border-stone-800 flex items-center justify-between">
+              <div className="bg-[#150404] px-6 py-4 border-b border-red-950/40 flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <Film className="w-5 h-5 text-amber-500" />
                   <span className="text-stone-100 font-serif text-sm sm:text-base font-bold tracking-wider truncate max-w-md sm:max-w-xl">
@@ -456,7 +456,7 @@ export default function Works() {
               </div>
 
               {/* Video Simulated Screen */}
-              <div className="relative aspect-video bg-stone-950 flex flex-col items-center justify-center overflow-hidden">
+              <div className="relative aspect-video bg-[#150404] flex flex-col items-center justify-center overflow-hidden">
                 {/* Background cover blurred */}
                 <img
                   src={selectedVideo.coverUrl}
@@ -514,7 +514,7 @@ export default function Works() {
                 {/* Subtitle placeholder scrolling on simulated timer */}
                 {isVideoPlaying && (
                   <div className="absolute bottom-14 left-4 right-4 text-center z-10 pointer-events-none">
-                    <p className="text-amber-300 font-serif text-sm sm:text-base tracking-widest bg-stone-950/65 backdrop-blur-sm px-4 py-1.5 inline-block rounded border border-stone-800">
+                    <p className="text-amber-300 font-serif text-sm sm:text-base tracking-widest bg-black/80 backdrop-blur-sm px-4 py-1.5 inline-block rounded border border-red-950/35">
                       {videoTimer % 12 < 4 
                         ? '「听这极高亢而苍凉的内弦音，在广阔的大地上传递」'
                         : videoTimer % 12 < 8
@@ -525,7 +525,7 @@ export default function Works() {
                 )}
 
                 {/* Player Bottom Control Bar */}
-                <div className="absolute bottom-0 left-0 right-0 h-12 bg-stone-950/90 border-t border-stone-800/60 px-4 flex items-center justify-between text-stone-300 z-10 text-xs">
+                <div className="absolute bottom-0 left-0 right-0 h-12 bg-black/90 border-t border-red-950/40 px-4 flex items-center justify-between text-stone-300 z-10 text-xs text-xs">
                   <div className="flex items-center space-x-4">
                     <button
                       onClick={() => setIsVideoPlaying(!isVideoPlaying)}
@@ -539,7 +539,7 @@ export default function Works() {
                   </div>
 
                   <div className="flex items-center space-x-3 text-stone-400">
-                    <span className="font-mono tracking-widest text-xxs bg-stone-800 px-1.5 py-0.5 rounded text-amber-500">
+                    <span className="font-mono tracking-widest text-xxs bg-[#240c0c] px-1.5 py-0.5 rounded text-amber-500">
                       1080P Ultra
                     </span>
                     <Maximize2 className="w-4 h-4 hover:text-stone-200 cursor-pointer" />
@@ -548,7 +548,7 @@ export default function Works() {
               </div>
 
               {/* Video description footer */}
-              <div className="p-6 bg-stone-900 border-t border-stone-800/40">
+              <div className="p-6 bg-[#150404] border-t border-red-950/40">
                 <p className="text-stone-300 text-sm font-sans leading-relaxed">
                   {selectedVideo.description}
                 </p>

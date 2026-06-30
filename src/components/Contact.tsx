@@ -64,12 +64,12 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 bg-stone-950 relative overflow-hidden"
+      className="py-24 bg-[#1c0808] relative overflow-hidden"
     >
       {/* Structural water-ink wash decorative overlays */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
-        <div className="absolute top-1/3 left-10 w-96 h-96 rounded-full bg-stone-900 blur-[130px]" />
-        <div className="absolute bottom-10 right-10 w-[450px] h-[450px] rounded-full bg-gradient-to-t from-stone-900 to-transparent blur-[140px]" />
+        <div className="absolute top-1/3 left-10 w-96 h-96 rounded-full bg-red-950/20 blur-[130px]" />
+        <div className="absolute bottom-10 right-10 w-[450px] h-[450px] rounded-full bg-gradient-to-t from-[#1c0808] to-transparent blur-[140px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -92,7 +92,7 @@ export default function Contact() {
           
           {/* Left Column: Contact Card info (5 columns) */}
           <div className="lg:col-span-5 space-y-8">
-            <div className="bg-stone-900 border border-stone-800 rounded-lg p-6 sm:p-8 space-y-8 shadow-2xl relative">
+            <div className="bg-[#240c0c] border border-red-950/40 rounded-lg p-6 sm:p-8 space-y-8 shadow-2xl relative">
               
               {/* Corner Stamp */}
               <div className="absolute top-4 right-4 w-10 h-10 border border-amber-500/10 flex items-center justify-center text-stone-600 rounded">
@@ -111,7 +111,7 @@ export default function Contact() {
               {/* Direct Info Lines */}
               <div className="space-y-4 pt-2">
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-stone-950 rounded border border-stone-800 text-amber-500">
+                  <div className="p-3 bg-[#150404] rounded border border-red-950/40 text-amber-500">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -126,7 +126,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-stone-950 rounded border border-stone-800 text-amber-500">
+                  <div className="p-3 bg-[#150404] rounded border border-red-950/40 text-amber-500">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -138,7 +138,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-stone-950 rounded border border-stone-800 text-amber-500">
+                  <div className="p-3 bg-[#150404] rounded border border-red-950/40 text-amber-500">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -151,13 +151,13 @@ export default function Contact() {
               </div>
 
               {/* Social Platforms Traditional Seals */}
-              <div className="border-t border-stone-800/60 pt-6 space-y-4">
+              <div className="border-t border-red-950/40 pt-6 space-y-4">
                 <h4 className="text-stone-400 font-serif text-xs tracking-wider">
                   官方新媒体发布渠道
                 </h4>
                 
                 <div className="grid grid-cols-2 gap-3 text-xs">
-                  <div className="p-3 bg-stone-950 rounded border border-stone-800 flex flex-col justify-between h-20 group">
+                  <div className="p-3 bg-[#150404] rounded border border-red-950/40 flex flex-col justify-between h-20 group">
                     <span className="text-stone-500 font-mono text-xxs">微信公众号</span>
                     <span className="text-stone-200 font-semibold group-hover:text-amber-400 transition-colors truncate">
                       万年芳二胡艺术
@@ -168,7 +168,7 @@ export default function Contact() {
                     href={ARTIST_INFO.socials.weibo}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-3 bg-stone-950 rounded border border-stone-800 flex flex-col justify-between h-20 group hover:border-amber-500/20 transition-colors"
+                    className="p-3 bg-[#150404] rounded border border-red-950/40 flex flex-col justify-between h-20 group hover:border-amber-500/20 transition-colors"
                   >
                     <div className="flex items-center justify-between text-stone-500 text-xxs">
                       <span>新浪微博</span>
@@ -183,7 +183,7 @@ export default function Contact() {
                     href={ARTIST_INFO.socials.bilibili}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-3 bg-stone-950 rounded border border-stone-800 flex flex-col justify-between h-20 group hover:border-amber-500/20 transition-colors"
+                    className="p-3 bg-[#150404] rounded border border-red-950/40 flex flex-col justify-between h-20 group hover:border-amber-500/20 transition-colors"
                   >
                     <div className="flex items-center justify-between text-stone-500 text-xxs">
                       <span>哔哩哔哩</span>
@@ -198,7 +198,7 @@ export default function Contact() {
                     href={ARTIST_INFO.socials.youtube}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-3 bg-stone-950 rounded border border-stone-800 flex flex-col justify-between h-20 group hover:border-amber-500/20 transition-colors"
+                    className="p-3 bg-[#150404] rounded border border-red-950/40 flex flex-col justify-between h-20 group hover:border-amber-500/20 transition-colors"
                   >
                     <div className="flex items-center justify-between text-stone-500 text-xxs">
                       <span>YouTube</span>
@@ -218,7 +218,7 @@ export default function Contact() {
           <div className="lg:col-span-7 space-y-6">
             
             {/* Form & Outbox Toggles */}
-            <div className="flex items-center justify-between border-b border-stone-800 pb-3">
+            <div className="flex items-center justify-between border-b border-red-950/40 pb-3">
               <span className="text-sm font-serif font-semibold text-stone-200 tracking-wider flex items-center space-x-2">
                 <MessageSquare className="w-4 h-4 text-amber-500" />
                 <span>在线留言咨询</span>
@@ -244,7 +244,7 @@ export default function Contact() {
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <form onSubmit={handleSubmit} className="space-y-5 bg-stone-900 border border-stone-800 rounded-lg p-6 sm:p-8">
+                  <form onSubmit={handleSubmit} className="space-y-5 bg-[#240c0c] border border-red-950/40 rounded-lg p-6 sm:p-8">
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-1.5">
@@ -256,7 +256,7 @@ export default function Contact() {
                           value={formData.name}
                           onChange={handleInputChange}
                           placeholder="您的尊姓大名"
-                          className="w-full bg-stone-950 border border-stone-800 focus:border-amber-500/50 rounded p-2.5 text-xs text-stone-200 placeholder-stone-600 focus:outline-none transition-colors"
+                          className="w-full bg-[#150404] border border-red-950/40 focus:border-amber-500/50 rounded p-2.5 text-xs text-stone-200 placeholder-stone-600 focus:outline-none transition-colors"
                         />
                       </div>
 
@@ -269,7 +269,7 @@ export default function Contact() {
                           value={formData.email}
                           onChange={handleInputChange}
                           placeholder="cooperation@example.com"
-                          className="w-full bg-stone-950 border border-stone-800 focus:border-amber-500/50 rounded p-2.5 text-xs text-stone-200 placeholder-stone-600 focus:outline-none transition-colors"
+                          className="w-full bg-[#150404] border border-red-950/40 focus:border-amber-500/50 rounded p-2.5 text-xs text-stone-200 placeholder-stone-600 focus:outline-none transition-colors"
                         />
                       </div>
                     </div>
@@ -280,7 +280,7 @@ export default function Contact() {
                         name="subject"
                         value={formData.subject}
                         onChange={handleInputChange}
-                        className="w-full bg-stone-950 border border-stone-800 focus:border-amber-500/50 rounded p-2.5 text-xs text-stone-200 focus:outline-none transition-colors appearance-none"
+                        className="w-full bg-[#150404] border border-red-950/40 focus:border-amber-500/50 rounded p-2.5 text-xs text-stone-200 focus:outline-none transition-colors appearance-none"
                       >
                         <option value="performance">演艺演出邀约 (Concerts & Recitals)</option>
                         <option value="academic">学术与研讨会大师课 (Lectures & Masterclass)</option>
@@ -297,7 +297,7 @@ export default function Contact() {
                         value={formData.content}
                         onChange={handleInputChange}
                         placeholder="请具体写下您的邀约计划、预算规模、时间地点，或求学资历，方便工作室为您高效处理..."
-                        className="w-full bg-stone-950 border border-stone-800 focus:border-amber-500/50 rounded p-2.5 text-xs text-stone-200 placeholder-stone-600 focus:outline-none resize-none transition-colors"
+                        className="w-full bg-[#150404] border border-red-950/40 focus:border-amber-500/50 rounded p-2.5 text-xs text-stone-200 placeholder-stone-600 focus:outline-none resize-none transition-colors"
                       />
                     </div>
 
@@ -316,7 +316,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-3.5 bg-gradient-to-r from-stone-800 to-stone-900 hover:from-amber-500 hover:to-amber-600 text-stone-300 hover:text-stone-950 border border-stone-700 hover:border-amber-500 rounded text-xs font-serif font-bold tracking-widest transition-all duration-300 disabled:opacity-50 flex items-center justify-center space-x-2"
+                      className="w-full py-3.5 bg-gradient-to-r from-red-950 to-[#240c0c] hover:from-amber-500 hover:to-amber-600 text-stone-300 hover:text-stone-950 border border-red-900/30 hover:border-amber-500 rounded text-xs font-serif font-bold tracking-widest transition-all duration-300 disabled:opacity-50 flex items-center justify-center space-x-2"
                     >
                       {isSubmitting ? (
                         <>
@@ -339,7 +339,7 @@ export default function Contact() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
                   transition={{ duration: 0.3 }}
-                  className="space-y-4 bg-stone-900 border border-stone-800 rounded-lg p-6"
+                  className="space-y-4 bg-[#240c0c] border border-red-950/40 rounded-lg p-6"
                 >
                   <h4 className="text-xs font-mono font-bold tracking-widest text-amber-500 uppercase">
                     我的发信箱 (OUTBOX LOGS)
@@ -347,7 +347,7 @@ export default function Contact() {
 
                   <div className="space-y-4 max-h-[360px] overflow-y-auto pr-2 custom-scrollbar">
                     {messages.map((msg) => (
-                      <div key={msg.id} className="bg-stone-950 border border-stone-850 p-4 rounded space-y-3 relative group">
+                      <div key={msg.id} className="bg-[#150404] border border-red-950/30 p-4 rounded space-y-3 relative group">
                         <div className="flex items-center justify-between">
                           <span className="text-xs font-serif font-bold text-amber-400 bg-amber-500/5 px-2 py-0.5 rounded border border-amber-500/10">
                             {msg.subject}
@@ -359,7 +359,7 @@ export default function Contact() {
                           {msg.content}
                         </p>
 
-                        <div className="flex items-center justify-between border-t border-stone-900 pt-2.5 text-xxs font-mono text-stone-500">
+                        <div className="flex items-center justify-between border-t border-red-950/25 pt-2.5 text-xxs font-mono text-stone-500">
                           <span>发件人: {msg.name} ({msg.email})</span>
                           <div className="flex items-center space-x-3">
                             <span className="text-amber-500 flex items-center space-x-1">
@@ -380,7 +380,7 @@ export default function Contact() {
 
                   <button
                     onClick={() => setShowOutbox(false)}
-                    className="w-full py-2.5 bg-stone-950 border border-stone-800 hover:border-stone-700 text-stone-300 rounded text-xs transition-colors"
+                    className="w-full py-2.5 bg-[#150404] border border-red-950/40 hover:border-red-900/40 text-stone-300 rounded text-xs transition-colors"
                   >
                     返回留言咨询
                   </button>

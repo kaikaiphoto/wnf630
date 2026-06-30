@@ -9,14 +9,14 @@ export default function Footer({ onBackToTop }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-stone-950 border-t border-stone-900 text-stone-400 py-12 relative overflow-hidden">
+    <footer className="bg-[#150404] border-t border-red-950/40 text-stone-400 py-12 relative overflow-hidden">
       
       {/* Visual divider design */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-stone-800 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-red-950/35 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-stone-900">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-red-950/30">
           
           {/* Brand block */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-1.5">
@@ -37,7 +37,7 @@ export default function Footer({ onBackToTop }: FooterProps) {
           {/* Back to top bubble */}
           <button
             onClick={onBackToTop}
-            className="p-3 bg-stone-900 hover:bg-stone-800 border border-stone-850 hover:border-stone-700 rounded-full text-stone-300 hover:text-amber-400 transition-all duration-300 shadow-md flex items-center justify-center cursor-pointer"
+            className="p-3 bg-[#240c0c] hover:bg-red-950 border border-red-950/40 hover:border-red-900/40 rounded-full text-stone-300 hover:text-amber-400 transition-all duration-300 shadow-md flex items-center justify-center cursor-pointer"
             title="回到顶部"
           >
             <ArrowUp className="w-4 h-4" />

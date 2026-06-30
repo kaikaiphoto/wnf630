@@ -18,12 +18,12 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-24 bg-stone-900 relative overflow-hidden"
+      className="py-24 bg-[#240c0c] relative overflow-hidden"
     >
       {/* Decorative vertical lines and background symbols */}
-      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
-        <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-stone-700" />
-        <div className="absolute left-[15%] right-[15%] top-[20%] bottom-[20%] border-l border-r border-stone-800" />
+      <div className="absolute inset-0 z-0 opacity-15 pointer-events-none">
+        <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-red-950/40" />
+        <div className="absolute left-[15%] right-[15%] top-[20%] bottom-[20%] border-l border-r border-red-950/20" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -61,10 +61,10 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.8 }}
-              className="bg-stone-950 p-8 sm:p-10 rounded border border-stone-800 relative shadow-xl shadow-stone-950/50 flex-grow flex flex-col justify-center overflow-hidden group"
+              className="bg-[#150404] p-8 sm:p-10 rounded border border-red-950/50 relative shadow-xl shadow-red-950/30 flex-grow flex flex-col justify-center overflow-hidden group"
             >
               {/* Decorative ink stain simulation in the corner */}
-              <div className="absolute -bottom-10 -right-10 w-44 h-44 rounded-full bg-stone-900/60 blur-3xl pointer-events-none group-hover:bg-amber-950/10 transition-colors duration-500" />
+              <div className="absolute -bottom-10 -right-10 w-44 h-44 rounded-full bg-[#240c0c]/60 blur-3xl pointer-events-none group-hover:bg-amber-950/10 transition-colors duration-500" />
               
               {/* Gold double line top border detail */}
               <div className="w-12 h-1 bg-amber-500/40 mb-6" />
@@ -89,7 +89,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="bg-gradient-to-r from-stone-950 to-stone-900 p-6 rounded border border-stone-800 shadow-lg flex items-center space-x-4"
+              className="bg-gradient-to-r from-[#150404] to-[#240c0c] p-6 rounded border border-red-950/50 shadow-lg flex items-center space-x-4"
             >
               <div className="p-3 bg-amber-500/10 rounded border border-amber-500/20 text-amber-500">
                 <GraduationCap className="w-6 h-6" />
@@ -130,7 +130,7 @@ export default function About() {
                 <span className="w-12 h-[1px] bg-amber-500/30" />
               </h3>
 
-              <div className="relative border-l border-stone-800 pl-6 sm:pl-8 space-y-8 py-2">
+              <div className="relative border-l border-red-950/40 pl-6 sm:pl-8 space-y-8 py-2">
                 {ARTIST_INFO.achievements.map((achievement, idx) => {
                   const Icon = getAchievementIcon(achievement.year);
                   return (
@@ -143,7 +143,7 @@ export default function About() {
                       className="relative group"
                     >
                       {/* Timeline Dot Indicator with Icon */}
-                      <div className="absolute -left-[39px] sm:-left-[47px] top-1.5 w-6 sm:w-8 h-6 sm:h-8 rounded-full bg-stone-900 border border-stone-700 text-stone-400 flex items-center justify-center group-hover:border-amber-500 group-hover:text-amber-500 transition-all duration-300 shadow-md">
+                      <div className="absolute -left-[39px] sm:-left-[47px] top-1.5 w-6 sm:w-8 h-6 sm:h-8 rounded-full bg-[#1a0505] border border-red-900/40 text-stone-400 flex items-center justify-center group-hover:border-amber-500 group-hover:text-amber-500 transition-all duration-300 shadow-md">
                         <Icon className="w-3 sm:w-4 h-3 sm:h-4" />
                       </div>
 

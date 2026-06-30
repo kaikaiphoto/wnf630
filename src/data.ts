@@ -1,7 +1,7 @@
 import { EventItem, TrackItem, VideoItem, NewsItem } from './types';
 
 export const ARTIST_INFO = {
-  name: '万年芳的个人网站',
+  name: '万年芳',
   title: '著名二胡演奏家 / 教育家 / 国家二级演员',
   slogan: '弦动山河，韵载春秋',
   subSlogan: '以两弦之音，承华夏千年之律，融现代交响之美',

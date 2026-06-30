@@ -11,14 +11,14 @@ export default function Hero({ onExploreWorks, onContact }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen bg-stone-950 flex items-center justify-center pt-24 pb-16 overflow-hidden"
+      className="relative min-h-screen bg-[#1c0808] flex items-center justify-center pt-24 pb-16 overflow-hidden"
     >
       {/* Dynamic Water-ink background overlays */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-40">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-stone-900 via-stone-800 to-transparent blur-[120px]" />
-        <div className="absolute bottom-1/3 right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-l from-stone-900 via-stone-800 to-transparent blur-[150px]" />
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-45">
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-red-950 via-red-900/40 to-transparent blur-[120px]" />
+        <div className="absolute bottom-1/3 right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-l from-red-950 via-red-900/40 to-transparent blur-[150px]" />
         {/* Subtle decorative horizontal red ink line - traditional Chinese artistic signature */}
-        <div className="absolute left-0 right-0 top-1/2 h-[1px] bg-gradient-to-r from-transparent via-red-900/40 to-transparent" />
+        <div className="absolute left-0 right-0 top-1/2 h-[1px] bg-gradient-to-r from-transparent via-red-800/50 to-transparent" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -36,7 +36,7 @@ export default function Hero({ onExploreWorks, onContact }: HeroProps) {
               <div className="absolute inset-4 border border-amber-500/20 pointer-events-none -translate-x-3 -translate-y-3 transition-transform duration-500 group-hover:translate-x-0 group-hover:translate-y-0 z-0" />
               
               {/* Main Image Frame with Shadow & Soft Overlay */}
-              <div className="relative z-10 overflow-hidden rounded shadow-2xl shadow-black/80 border border-stone-800 bg-stone-900">
+              <div className="relative z-10 overflow-hidden rounded shadow-2xl shadow-black/80 border border-red-950/50 bg-[#240c0c]">
                 <img
                   src={ARTIST_INFO.avatarUrl}
                   alt={ARTIST_INFO.name}
@@ -49,15 +49,6 @@ export default function Hero({ onExploreWorks, onContact }: HeroProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-60 pointer-events-none" />
               </div>
 
-              {/* Red Traditional Seal Emblem "万" */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.0, duration: 0.8 }}
-                className="absolute -bottom-3 -right-3 z-20 w-12 h-12 rounded bg-red-800 border border-red-700 flex items-center justify-center shadow-lg transform rotate-6"
-              >
-                <span className="font-serif text-stone-100 text-xl font-semibold tracking-wider">万</span>
-              </motion.div>
             </motion.div>
           </div>
 
@@ -110,7 +101,7 @@ export default function Hero({ onExploreWorks, onContact }: HeroProps) {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 1.0 }}
-              className="text-stone-300 font-serif leading-relaxed text-base sm:text-lg max-w-xl mx-auto lg:mx-0 italic border-l-2 border-stone-800 pl-4 py-1"
+              className="text-stone-300 font-serif leading-relaxed text-base sm:text-lg max-w-xl mx-auto lg:mx-0 italic border-l-2 border-red-950/60 pl-4 py-1"
             >
               {ARTIST_INFO.subSlogan}
             </motion.p>
@@ -144,7 +135,7 @@ export default function Hero({ onExploreWorks, onContact }: HeroProps) {
               <button
                 id="hero-btn-contact"
                 onClick={onContact}
-                className="w-full sm:w-auto px-8 py-3.5 bg-stone-900 hover:bg-stone-800 border border-stone-700 hover:border-stone-600 text-stone-200 hover:text-stone-50 font-medium tracking-widest rounded transition-all duration-300 flex items-center justify-center space-x-2.5 active:scale-98"
+                className="w-full sm:w-auto px-8 py-3.5 bg-[#240c0c] hover:bg-[#321212] border border-red-950/50 hover:border-red-900/40 text-stone-200 hover:text-stone-50 font-medium tracking-widest rounded transition-all duration-300 flex items-center justify-center space-x-2.5 active:scale-98"
               >
                 <Calendar className="w-4 h-4 text-stone-400" />
                 <span>商务合作与演出</span>
@@ -156,7 +147,7 @@ export default function Hero({ onExploreWorks, onContact }: HeroProps) {
       </div>
 
       {/* Aesthetic bottom shadow fade into next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-stone-950 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#1c0808] to-transparent pointer-events-none" />
     </section>
   );
 }

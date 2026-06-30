@@ -63,7 +63,7 @@ export default function App() {
   };
 
   return (
-    <div id="app-root" className="min-h-screen bg-stone-950 text-stone-300 font-sans selection:bg-amber-500/30 selection:text-amber-200">
+    <div id="app-root" className="min-h-screen bg-[#1c0808] text-stone-300 font-sans selection:bg-amber-500/30 selection:text-amber-200">
       
       {/* 1. Header/Navigation */}
       <Navbar activeSection={activeSection} onNavigate={handleNavigate} />
@@ -75,7 +75,7 @@ export default function App() {
       />
 
       {/* 3. Latest News / 最新动态 (Integrated immediately after Hero) */}
-      <section id="news-section" className="py-20 bg-stone-950 border-t border-b border-stone-900 relative">
+      <section id="news-section" className="py-20 bg-[#1c0808] border-t border-b border-red-950/40 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Section title */}
@@ -101,18 +101,18 @@ export default function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
                 transition={{ delay: index * 0.1, duration: 0.8 }}
-                className="bg-stone-900/60 border border-stone-900 rounded-lg overflow-hidden group hover:border-stone-800 transition-all duration-300 flex flex-col justify-between"
+                className="bg-[#2a0e0e]/60 border border-red-950/30 rounded-lg overflow-hidden group hover:border-red-900/40 transition-all duration-300 flex flex-col justify-between"
               >
                 {/* Visual Cover */}
                 {article.imageUrl && (
-                  <div className="relative aspect-video overflow-hidden bg-stone-950">
+                  <div className="relative aspect-video overflow-hidden bg-[#150404]">
                     <img
                       src={article.imageUrl}
                       alt={article.title}
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover opacity-75 group-hover:opacity-90 transform group-hover:scale-103 transition-all duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#2a0e0e]/80 via-transparent to-transparent" />
                   </div>
                 )}
 
@@ -178,18 +178,18 @@ export default function App() {
               initial={{ scale: 0.95, y: 15 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 15 }}
-              className="bg-stone-900 border border-stone-800 rounded-lg max-w-2xl w-full overflow-hidden shadow-2xl relative my-8"
+              className="bg-[#240c0c] border border-red-900/30 rounded-lg max-w-2xl w-full overflow-hidden shadow-2xl relative my-8"
             >
               {/* Cover Header Image if exists */}
               {selectedArticle.imageUrl && (
-                <div className="relative h-48 sm:h-64 bg-stone-950 overflow-hidden">
+                <div className="relative h-48 sm:h-64 bg-[#150404] overflow-hidden">
                   <img
                     src={selectedArticle.imageUrl}
                     alt={selectedArticle.title}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover opacity-60"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#240c0c] via-[#240c0c]/40 to-transparent" />
                   
                   {/* Close button inside image */}
                   <button
@@ -229,7 +229,7 @@ export default function App() {
                 </div>
 
                 {/* Poetic description / summary box */}
-                <p className="bg-stone-950 p-4 rounded text-stone-300 font-serif leading-relaxed text-sm border-l-2 border-amber-500 italic">
+                <p className="bg-[#150404] p-4 rounded text-stone-300 font-serif leading-relaxed text-sm border-l-2 border-amber-500 italic">
                   “{selectedArticle.summary}”
                 </p>
 
@@ -243,7 +243,7 @@ export default function App() {
                 </div>
 
                 {/* Footer seal signature */}
-                <div className="border-t border-stone-800/60 pt-6 flex justify-between items-center text-stone-500 text-xxs font-mono">
+                <div className="border-t border-red-900/20 pt-6 flex justify-between items-center text-stone-500 text-xxs font-mono">
                   <span>中国民乐新闻中心 ・ 官方受权发布</span>
                   <span className="font-serif italic text-amber-500/80">万年芳工作室</span>
                 </div>

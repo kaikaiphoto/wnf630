@@ -37,8 +37,8 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
       id="main-navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-stone-950/85 backdrop-blur-md shadow-lg border-b border-stone-800/40 py-3'
-          : 'bg-gradient-to-b from-stone-950/80 to-transparent py-5'
+          ? 'bg-[#1c0808]/90 backdrop-blur-md shadow-lg border-b border-red-950/30 py-3'
+          : 'bg-gradient-to-b from-[#1c0808]/90 to-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,7 +90,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-stone-300 hover:text-stone-100 focus:outline-none p-2 rounded-md hover:bg-stone-900/60 transition-colors"
+              className="text-stone-300 hover:text-stone-100 focus:outline-none p-2 rounded-md hover:bg-red-900/20 transition-colors"
               aria-label="Toggle Menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -107,7 +107,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-stone-950/95 backdrop-blur-lg border-b border-stone-900"
+            className="md:hidden bg-[#1c0808]/95 backdrop-blur-lg border-b border-red-950/40"
           >
             <div className="px-4 pt-2 pb-6 space-y-2">
               {navItems.map((item) => {
@@ -120,7 +120,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
                     className={`flex items-center space-x-3 w-full px-4 py-3 rounded-lg text-base tracking-wider transition-colors ${
                       isActive
                         ? 'bg-amber-500/10 text-amber-400 font-medium border-l-2 border-amber-500'
-                        : 'text-stone-300 hover:bg-stone-900/50 hover:text-stone-100'
+                        : 'text-stone-300 hover:bg-red-900/20 hover:text-stone-100'
                     }`}
                   >
                     <Icon className="w-5 h-5 opacity-85" />

@@ -1,0 +1,6 @@
+{
+  "name": "万年芳二胡艺术网",
+  "description": "著名二胡演奏家万年芳先生个人官方网站。采用典雅现代水墨风格，展示其艺术生平、二胡代表作、演出日程及合作联系。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

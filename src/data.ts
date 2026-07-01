@@ -165,6 +165,17 @@ export const EVENTS: EventItem[] = [
     city: '西安',
     status: 'completed',
     description: '集中展示万年芳先生及其优秀学生团队的二胡艺术风采，曲目包罗万象，见证国乐精神的薪火相传。'
+  },
+  {
+    id: 'evt-6',
+    title: '金秋雅集田子坊 · 四君胡琴演奏会',
+    type: 'concert',
+    date: '2025-10-18',
+    time: '14:00',
+    venue: '田子坊艺术中心（泰康路210弄2号二楼）',
+    city: '上海',
+    status: 'completed',
+    description: '“弓吟弦歌五十春”重磅名家雅集。万年芳先生联袂苑杰、徐正宏、邓伟民等四位胡琴名家与特邀主持何思宣，奉献15首经典独奏与齐奏作品。'
   }
 ];
 

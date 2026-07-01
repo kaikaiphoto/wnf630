@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Works from './components/Works';
+import TianzifangConcert from './components/TianzifangConcert';
 import Schedule from './components/Schedule';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -21,7 +22,7 @@ export default function App() {
 
   // Scroll Spy to highlight current navigation section
   useEffect(() => {
-    const sections = ['hero', 'news-section', 'about', 'works', 'schedule', 'contact'];
+    const sections = ['hero', 'news-section', 'about', 'works', 'tianzifang-concert', 'schedule', 'contact'];
     
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200; // offset for nav bar
@@ -35,6 +36,8 @@ export default function App() {
             // map news-section spy back to hero or about for navbar active item
             if (sectionId === 'news-section') {
               setActiveSection('hero');
+            } else if (sectionId === 'tianzifang-concert') {
+              setActiveSection('works');
             } else {
               setActiveSection(sectionId);
             }
@@ -155,6 +158,9 @@ export default function App() {
 
       {/* 5. Masterpieces / Dynamic Synthesizer Player */}
       <Works />
+
+      {/* Classic Concert Review: Tianzifang Four Gentlemen Concert */}
+      <TianzifangConcert />
 
       {/* 6. Performance Calendars / Local Booking reservations */}
       <Schedule />

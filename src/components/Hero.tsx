@@ -25,12 +25,12 @@ export default function Hero({ onExploreWorks, onContact }: HeroProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* Left Column: Portrait Image with Classical Framing */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-start order-2 lg:order-1">
+          <div className="lg:col-span-6 flex justify-center lg:justify-start order-1 lg:order-1">
             <motion.div
-              initial={{ opacity: 0, x: -60, scale: 0.95 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative group max-w-[350px] sm:max-w-[400px] w-full"
+              className="relative group max-w-[420px] sm:max-w-[500px] lg:max-w-[550px] w-full"
             >
               {/* Outer Golden Line Frame */}
               <div className="absolute inset-4 border border-amber-500/20 pointer-events-none -translate-x-3 -translate-y-3 transition-transform duration-500 group-hover:translate-x-0 group-hover:translate-y-0 z-0" />
@@ -53,7 +53,7 @@ export default function Hero({ onExploreWorks, onContact }: HeroProps) {
           </div>
 
           {/* Right Column: Slogan, Title and Introduction */}
-          <div className="lg:col-span-7 flex flex-col justify-center order-1 lg:order-2 space-y-8 text-center lg:text-left">
+          <div className="lg:col-span-6 flex flex-col justify-center order-2 lg:order-2 space-y-8 text-center lg:text-left">
             <div className="space-y-4">
               
               {/* Aesthetic Subtitle Category */}

@@ -5,7 +5,7 @@ export const ARTIST_INFO = {
   title: '著名二胡演奏家 / 一级演奏员 / 音乐制作人',
   slogan: '弦动山河，韵载春秋',
   subSlogan: '以两弦之音，承华夏千年之律，融现代交响之美',
-  avatarUrl: 'https://photos.1804078.xyz/42hu/wnf.png',
+  avatarUrl: 'https://photos.1804078.xyz/42hu/wnf.webp',
   email: 'wnf@wannianfang-erhu.com',
   phone: '+86 (021) 8888-6666',
   address: '中国上海徐汇区民族艺术文化交流中心',
